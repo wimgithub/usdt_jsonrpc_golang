@@ -1,4 +1,4 @@
-# usdtapi
+# USDT Json-Rpc API
 
 Implement a simple omni core RPC interface.
 Support for http basic auth.
@@ -26,10 +26,10 @@ var (
 func main() {
 	omni := usdtapi.NewOmniClient(connCfg)
 
-	b, r := omni.GetBalance("mveUkR2wkxL1fVPaD7APMXwbDxbE57yDWC", 3)
+	b, r := omni.GetBalance("USDT_Address", 3)
 	log.Printf("%s, %s\n", b, r)
 
-	h := omni.Send("mveUkR2wkxL1fVPaD7APMXwbDxbE57yDWC", "mpF14fMrBJ3kLAePfHMC3Nppi2wdTZiTiq", 3, "1")
+	h := omni.Send("USDT_Address", "USDT_Address", 3, "1")
 	log.Printf("%v\n", h)
 
 	tx := omni.ListTransactions()
